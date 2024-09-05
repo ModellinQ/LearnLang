@@ -1,4 +1,4 @@
-.header{
+header{
   background-color: #2A0134;
   position: fixed;
   margin:0;
@@ -36,18 +36,7 @@ nav li a:hover {
 .active {
   background-color: #000000;
 }
-html body{
-      padding-top: 65px;
-      font-family: "Open Sans",Sans-serif ;
-         }
-.footer{
-  background-color: #2A0134;
-  position: absolute;
-  bottom: 0;
-  margin:0;
-  padding:0;
-  width:100%;
-  }
+
 
 
 #progress-display {
@@ -74,6 +63,15 @@ html, body {
 	overflow: hidden
 	background-color: #000000
 }
+footer{
+  background-color: #2A0134;
+  position: absolute;
+  bottom: 0;
+  margin:0;
+  padding:0;
+  width:100%;
+  }
+
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
