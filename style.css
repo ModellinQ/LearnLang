@@ -1,3 +1,18 @@
+.site-header{
+  background: #000000;
+  }
+.site-header p{
+  text-color: #FFFFFF;
+  }
+
+body{
+	overflow-y: hidden;
+  text-align: justified;
+}
+* {
+  margin-left: 10;
+}
+
 #progress-display {
     margin-top: 20px;
 }
@@ -14,3 +29,35 @@
 button {
     margin-top: 10px;
 }
+
+html, body {
+  height: 100%;
+}
+.topnav {
+	overflow: hidden
+	background-color: #000000
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -80px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 80px; 
+}
+.site-footer {
+  background: #000000;
+}
+
+.site-footer p{
+  text-align: center;
+  text-color: #FFFFFF;
+  padding-top: 2%;
+}
+
+
+
