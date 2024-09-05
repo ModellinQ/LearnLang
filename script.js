@@ -35,4 +35,16 @@ function resetProgress() {
     document.getElementById('progress-value').textContent = progress;
     localStorage.setItem('progress', progress);
     location.reload(); // Refresh the page to reset the lessons
+
+
+    // Reset all feedback messages
+    document.getElementById('result-lesson1').textContent = '';
+    document.getElementById('result-lesson2').textContent = '';
+
+    // Show the first lesson and hide the second one
+    document.getElementById('lesson1').style.display = 'block';
+    document.getElementById('lesson2').style.display = 'none';
+
+    // Hide the 'Next Lesson' button
+    document.getElementById('next-lesson').style.display = 'none';
 }
