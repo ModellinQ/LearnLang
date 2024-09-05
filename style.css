@@ -1,4 +1,7 @@
 /* Global Styles */
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -146,7 +149,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column; /* Stack nav items vertically */
+    flex-direction: row; /* Stack nav items vertically */
     align-items: flex-end;
     padding-right: 10px;
   }
