@@ -7,9 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="page-wrap">
         <h1>Learn a New Language</h1>
-
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
         <!-- Lesson 1 -->
         <div class="lesson" id="lesson1">
             <h2>Lesson 1</h2>
@@ -36,6 +45,10 @@
         <button id="next-lesson" onclick="showNextLesson()" style="display: none;">Next Lesson</button>
         <button onclick="resetProgress()">Reset Progress</button>
     </div>
+<!-- Footer Section -->
+    <footer class="site-footer">
+        <p>&copy; 2024 Your Website Name</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
