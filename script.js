@@ -1,50 +1,45 @@
-let progress = localStorage.getItem('progress') || 0;
-document.getElementById('progress-value').textContent = progress;
+// Initialize progress
+let progress = 0;
 
-function checkAnswer(lesson, answer) {
-    const result = document.getElementById(result-${lesson});
+// Function to check the answer for a lesson
+function checkAnswer(lessonId, answer) {
+    const resultElement = document.getElementById(`result-${lessonId}`);
+    
     if (answer === 'correct') {
-        result.textContent = 'Correct! Well done.';
-        result.style.color = 'green';
+        resultElement.textContent = "Correct! Well done!";
+        resultElement.style.color = "green";
         updateProgress();
-        document.getElementById('next-lesson').style.display = 'block';
+        document.getElementById('next-lesson').style.display = "inline-block";
     } else {
-        result.textContent = 'Incorrect. Try again.';
-        result.style.color = 'red';
+        resultElement.textContent = "Wrong! Try again.";
+        resultElement.style.color = "red";
     }
 }
 
+// Function to update progress
 function updateProgress() {
-    progress = Math.min(100, parseInt(progress) + 10); // Increase progress by 10% for each correct answer
-    document.getElementById('progress-value').textContent = progress;
-    localStorage.setItem('progress', progress);
-}
+    progress += 25; // Increase progress by 25% for each correct answer
+    const progressValue = document.getElementById('progress-value');
+    progressValue.textContent = progress;
 
-function showNextLesson() {
-    const currentLesson = document.querySelector('.lesson:not([style*="display: none"])');
-    const nextLesson = currentLesson.nextElementSibling;
-    if (nextLesson && nextLesson.classList.contains('lesson')) {
-        currentLesson.style.display = 'none';
-        nextLesson.style.display = 'block';
-        document.getElementById('next-lesson').style.display = 'none';
+    if (progress >= 100) {
+        progressValue.textContent = "100";
+        alert("Congratulations! You've completed all lessons.");
     }
 }
 
+// Function to show the next lesson (for future implementation)
+function showNextLesson() {
+    alert("Next lesson coming soon!"); // Placeholder
+    // You can add functionality here to load the next lesson
+}
+
+// Function to reset progress
 function resetProgress() {
     progress = 0;
     document.getElementById('progress-value').textContent = progress;
-    localStorage.setItem('progress', progress);
-    location.reload(); // Refresh the page to reset the lessons
-
-
-    // Reset all feedback messages
-    document.getElementById('result-lesson1').textContent = '';
-    document.getElementById('result-lesson2').textContent = '';
-
-    // Show the first lesson and hide the second one
-    document.getElementById('lesson1').style.display = 'block';
-    document.getElementById('lesson2').style.display = 'none';
-
-    // Hide the 'Next Lesson' button
-    document.getElementById('next-lesson').style.display = 'none';
+    document.getElementById('next-lesson').style.display = "none";
+    const resultElements = document.querySelectorAll('[id^="result-"]');
+    resultElements.forEach(result => result.textContent = "");
 }
+

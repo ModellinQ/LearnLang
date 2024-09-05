@@ -1,4 +1,4 @@
-/* Universal reset for margins and paddings */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,74 +6,154 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #e3f2fd; /* Light blue background */
+  color: #0d47a1; /* Dark blue text */
   line-height: 1.6;
-}
-p {
-  margin-bottom: 20px; /* Adds 20px space between paragraphs */
-}
-
-h1, h2, h3, h4 {
-  margin-bottom: 15px; /* Adjust space between headings */
+  padding: 20px;
+  margin: 0;
 }
 
+.container {
+  max-width: 1200px; /* Center content with max width */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
 header {
-  background-color: #2A0134;
+  background-color: #0d47a1; /* Dark blue */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 10px 0;
+  padding: 10px 0; /* Reduced padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
+  animation: slideIn 1s ease-in-out; /* Slide in from top */
 }
 
-/* Padding added to ensure content is not hidden by fixed header */
-.page-wrap {
-  padding-top: 60px; /* Adjust based on your header height */
+header h1 {
+  text-align: center;
+  color: white; /* White text */
+  font-size: 1.5em; /* Reduced font size */
+  margin: 0; /* Remove default margin */
 }
 
+/* Navbar */
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #2A0134;
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  gap: 20px; /* Add space between links */
+  padding-right: 20px; /* Space from the right edge */
 }
 
 nav li {
-  float: right;
+  margin: 0;
 }
 
 nav li a {
   display: block;
-  color: white;
+  color: white; /* White text on buttons */
+  background-color: #42a5f5; /* Bright blue buttons */
   text-align: center;
-  padding: 14px 16px;
+  padding: 10px 20px;
+  border-radius: 20px; /* Rounded buttons */
   text-decoration: none;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav li a:hover {
-  background-color: #111;
+  background-color: #1e88e5; /* Darker blue on hover */
+  animation: bounce 0.6s;
 }
 
-.active {
-  background-color: #000000;
+/* Page content layout */
+.page-wrap {
+  padding-top: 80px; /* Ensure content starts below the fixed header */
+  text-align: center; /* Center align all text and content */
 }
 
+h2 {
+  font-size: 2em;
+  color: #0d47a1; /* Dark blue headings */
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.2em; /* Larger, more readable text */
+}
+
+/* Buttons */
+button {
+  background-color: #42a5f5; /* Bright blue buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px; /* Rounded buttons */
+  font-size: 1.2em;
+  cursor: pointer;
+  margin: 10px; /* Space between buttons */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Bounce animation on button hover */
+button:hover {
+  background-color: #1e88e5; /* Darker blue */
+  animation: bounce 0.6s;
+}
+
+/* Image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Image scaling effect on hover */
+img:hover {
+  animation: scaleUp 0.5s ease forwards;
+}
+
+#progress-display {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+/* Footer */
 footer {
-  background-color: #2A0134;
-  position: absolute;
+  background-color: #0d47a1; /* Dark blue footer */
+  position: relative;
   bottom: 0;
   width: 100%;
-}
-
-.site-footer {
-  background-color: #000;
+  padding: 20px 0;
+  margin-top: 40px;
 }
 
 .site-footer p {
   text-align: center;
-  color: #FFFFFF;
-  padding-top: 2%;
+  color: white; /* White text */
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: flex-end;
+    padding-right: 10px;
+  }
+
+  nav li a {
+    font-size: 1em;
+    padding: 8px 15px;
+  }
 }
 
