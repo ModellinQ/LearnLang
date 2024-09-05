@@ -1,12 +1,12 @@
-header{
+header {
   background-color: #2A0134;
   position: fixed;
-  margin:0;
-  padding:0;
-  width:100%;
-  }
-  
-  nav ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -33,66 +33,68 @@ nav li a {
 nav li a:hover {
   background-color: #111;
 }
+
 .active {
   background-color: #000000;
 }
 
-
-
 #progress-display {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 #progress-value {
-    font-weight: bold;
-    color: #008CBA;
+  font-weight: bold;
+  color: #008CBA;
 }
 
 .lesson {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 button {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 html, body {
   height: 100%;
 }
+
 .topnav {
-	overflow: hidden
-	background-color: #000000
+  overflow: hidden;
+  background-color: #000000;
 }
-footer{
+
+footer {
   background-color: #2A0134;
   position: absolute;
   bottom: 0;
-  margin:0;
-  padding:0;
-  width:100%;
-  }
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
 .page-wrap {
   min-height: 100%;
-  /* equal to footer height */
-  margin-bottom: -80px; 
+  margin-bottom: -80px; /* equal to footer height */
 }
+
 .page-wrap:after {
   content: "";
   display: block;
 }
+
 .site-footer, .page-wrap:after {
-  height: 80px; 
+  height: 80px;
 }
+
 .site-footer {
   background: #000000;
 }
 
-.site-footer p{
+.site-footer p {
   text-align: center;
-  text-color: #FFFFFF;
+  color: #FFFFFF; /* Corrected property */
   padding-top: 2%;
 }
-
 
 
