@@ -1,17 +1,54 @@
-.site-header{
-  background: #000000;
+.header{
+  background-color: #2A0134;
+  position: fixed;
+  margin:0;
+  padding:0;
+  width:100%;
   }
-.site-header p{
-  text-color: #FFFFFF;
+  
+  nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2A0134;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav li {
+  float: right;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+  background-color: #111;
+}
+.active {
+  background-color: #000000;
+}
+html body{
+      padding-top: 65px;
+      font-family: "Open Sans",Sans-serif ;
+         }
+.footer{
+  background-color: #2A0134;
+  position: absolute;
+  bottom: 0;
+  margin:0;
+  padding:0;
+  width:100%;
   }
 
-body{
-	overflow-y: hidden;
-  text-align: justified;
-}
-* {
-  margin-left: 10;
-}
 
 #progress-display {
     margin-top: 20px;
