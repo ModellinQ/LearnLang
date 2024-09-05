@@ -1,9 +1,35 @@
+/* Universal reset for margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+p {
+  margin-bottom: 20px; /* Adds 20px space between paragraphs */
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 15px; /* Adjust space between headings */
+}
+
 header {
   background-color: #2A0134;
   position: fixed;
-  margin: 0;
-  padding: 0;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+/* Padding added to ensure content is not hidden by fixed header */
+.page-wrap {
+  padding-top: 60px; /* Adjust based on your header height */
 }
 
 nav ul {
@@ -12,9 +38,6 @@ nav ul {
   padding: 0;
   overflow: hidden;
   background-color: #2A0134;
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
 nav li {
@@ -29,7 +52,6 @@ nav li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 nav li a:hover {
   background-color: #111;
 }
@@ -38,63 +60,20 @@ nav li a:hover {
   background-color: #000000;
 }
 
-#progress-display {
-  margin-top: 20px;
-}
-
-#progress-value {
-  font-weight: bold;
-  color: #008CBA;
-}
-
-.lesson {
-  margin-bottom: 20px;
-}
-
-button {
-  margin-top: 10px;
-}
-
-html, body {
-  height: 100%;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #000000;
-}
-
 footer {
   background-color: #2A0134;
   position: absolute;
   bottom: 0;
-  margin: 0;
-  padding: 0;
   width: 100%;
 }
 
-.page-wrap {
-  min-height: 100%;
-  margin-bottom: -80px; /* equal to footer height */
-}
-
-.page-wrap:after {
-  content: "";
-  display: block;
-}
-
-.site-footer, .page-wrap:after {
-  height: 80px;
-}
-
 .site-footer {
-  background: #000000;
+  background-color: #000;
 }
 
 .site-footer p {
   text-align: center;
-  color: #FFFFFF; /* Corrected property */
+  color: #FFFFFF;
   padding-top: 2%;
 }
-
 
